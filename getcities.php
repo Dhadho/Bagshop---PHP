@@ -1,0 +1,8 @@
+<?php
+$id=$_GET['id'];
+include("db.php");
+$t=mysqli_query($cn,"select * from cities where state_id=$id");
+while($j=mysqli_fetch_array($t))
+	echo "<option value=$j[id]>$j[name]</option>";	
+
+?>
